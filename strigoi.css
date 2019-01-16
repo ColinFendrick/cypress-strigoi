@@ -1,0 +1,289 @@
+/* Cypress v3 */
+:root {
+  --background: #343746;
+  --dark-background: #282a36;
+  --lighter-background: #44475a;
+  --light-element: #6272a4;
+  --active-button: #44475A70;
+  --active-color: #cccccc;
+  --button-border: 1px solid #3a3a3a;
+  --command-border: 1px solid #606060;
+  --command-important-border: 1px solid #aaaaaa;
+  --active-command-border: 1px solid #707070;
+  --passed-border: 10px solid #50FA7B88;
+  --failed-border: 10px solid #ff5555;
+  --highlighted-text: #dddddd;
+  --pinned-command-background-color: #bd93f955;
+  --pinned-command-background-color-hover: #bd93f9;
+  --pinned-command-color-hover: #f8f8f2;
+  --icons-color: #999999;
+  --icons-hover-color: #cccccc;
+  --circle-color: #8be9fd99;
+  /* passed and failed commands */
+  --failed-command-background-color: inherit;
+  --state-failed-background-color: #ff5555;
+  --state-failed-color: #ffb86c;
+  --passed-text-color: #50fa7b;
+  --state-passed-color: #50FA7B88;
+}
+
+.reporter {
+  background-color: var(--background);
+}
+
+.runner header {
+  background-color: var(--background);
+}
+
+.runner header .url {
+  color: #aaaaaa;
+  background-color: var(--background);
+}
+
+.runner .url:hover,
+.runner .url:focus,
+.runner .url:active {
+  color: #eeeeee;
+}
+
+.runner .highlighted .url {
+  background-color: var(--light-element);
+}
+
+.runner .url:focus {
+  background-color: var(--light-element);
+}
+
+.runner .viewport-info button {
+  text-shadow: none;
+}
+
+.runner .viewport-info button:hover {
+  color: var(--active-color);
+}
+
+.runner {
+  background-image: none;
+  background-color: var(--lighter-background);
+}
+
+.reporter .container {
+  border: none;
+}
+
+.runner .selector-playground-toggle:hover {
+  background: none;
+  color: var(--active-color);
+}
+
+.reporter header {
+  background-color: var(--background);
+  color: var(--active-color);
+}
+
+.reporter header button {
+  background-color: var(--background);
+  border: var(--command-border);
+}
+
+.reporter header button:hover {
+  background-color: var(--lighter-background);
+  color: var(--active-color);
+  border: var(--command-important-border);
+}
+
+.reporter .runnable {
+  background-color: var(--background);
+}
+
+.reporter .runnable:hover {
+  background-color: var(--background);
+}
+
+.reporter .commands-container {
+  background-color: var(--active-button);
+}
+
+.reporter .command-wrapper:hover {
+  background-color: var(--active-button);
+  color: var(--highlighted-text);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.reporter .focus-tests button {
+  border-right: var(--button-border);
+}
+
+.reporter .stats .duration {
+  border-left: var(--button-border);
+  border-right: var(--button-border);
+}
+
+.reporter .stats li.passed {
+  color: var(--state-passed-color);
+}
+
+.reporter .stats li.failed {
+  color: var(--state-failed-background-color);
+}
+
+.reporter .controls>span:last-child button {
+  border-right: var(--button-border);
+}
+
+.reporter .controls .toggle-auto-scrolling.auto-scrolling-enabled i:first-child {
+  color: var(--state-failed-color);
+}
+
+.reporter .command-state-pending>span>.command-wrapper {
+  background-color: var(--lighter-background);
+}
+
+.reporter .command-state-pending>span>.command-wrapper .command-message {
+  color: var(--circle-color);
+}
+
+.reporter .command-type-parent {
+  border-top: var(--command-border);
+}
+
+.reporter .command-type-parent:hover {
+  border-top: var(--active-command-border);
+}
+
+.runner .aut-iframe {
+  background-color: var(--background);
+}
+
+.reporter .runnable.suite>div>.runnable-wrapper .runnable-title {
+  color: var(--active-color);
+}
+
+.reporter .hooks-container .hook-name:hover {
+  color: var(--highlighted-text);
+}
+
+.reporter .command-is-pinned>span>.command-wrapper {
+  background-color: var(--pinned-command-background-color);
+}
+
+.reporter .command-is-pinned>span>.command-wrapper:hover {
+  background-color: var(--pinned-command-background-color-hover);
+}
+
+.reporter .command-is-pinned>span>.command-wrapper:hover .command-message .command-message-text {
+  color: var(--pinned-command-color-hover);
+}
+
+.runner .message-controls {
+  background-color: var(--background);
+}
+
+.runner .snapshot-controls.showing-selection .toggle-selection {
+  background-color: var(--active-button);
+}
+
+.runner .snapshot-controls button:active {
+  background-color: var(--active-button);
+  color: var(--active-color);
+}
+
+.runner .snapshot-controls .snapshot-state-picker button.state-is-selected {
+  background-color: var(--lighter-background);
+  color: var(--state-failed-color);
+}
+
+.runner .snapshot-controls button:hover {
+  background-color: var(--active-button);
+  color: var(--active-color);
+}
+
+.reporter .command-name-xhr .fa-circle.successful {
+  color: var(--circle-color);
+}
+.reporter .command-name-assert.command-state-passed .command-method span {
+  background-color: var(--state-passed-color);
+  color: var(--passed-text-color);
+}
+
+.reporter ::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+}
+
+.reporter ::-webkit-scrollbar-track {
+  background-color: var(--dark-background);
+}
+
+.reporter .command-state-failed>span>.command-wrapper {
+  background-color: var(--failed-command-background-color);
+}
+
+.reporter .command-state-failed>span>.command-wrapper:hover {
+  background-color: var(--failed-command-background-color);
+}
+
+.reporter .command-name-assert.command-state-failed .command-method span {
+  background-color: var(--state-failed-background-color);
+  color: var(--state-failed-color);
+}
+
+.reporter .runnable pre {
+  background-color: var(--background);
+}
+
+.reporter .runnable pre:hover {
+  background-color: var(--lighter-background);
+}
+
+.reporter .runnable pre .test-error {
+  color: var(--state-failed-background-color);
+}
+
+.reporter pre {
+  border: var(--command-important-border);
+}
+
+.reporter .runnable-controls i {
+  color: var(--icons-color);
+}
+
+.reporter .runnable-controls i:hover {
+  color: var(--icons-hover-color);
+}
+
+.reporter .runnable.suite>div>.runnable-wrapper .collapsible-more {
+  color: var(--highlighted-text);
+  border-radius: 2px;
+}
+
+.reporter .runnable.suite.runnable-failed>div>.runnable-wrapper .collapsible-more {
+  margin-left: 5px;
+  background-color: var(--state-failed-background-color);
+}
+
+.reporter .runnable.suite.runnable-passed>div>.runnable-wrapper .collapsible-more {
+  margin-left: 5px;
+  background-color: var(--state-passed-color);
+}
+
+.reporter .runnable.test.runnable-passed>.runnable-wrapper {
+  border-left: var(--passed-border);
+}
+
+.reporter .runnable.suite.runnable-passed>div>.runnable-wrapper {
+  border-left: var(--passed-border);
+}
+
+.reporter .runnable.runnable-passed>.runnable-wrapper .runnable-state {
+  color: var(--state-passed-color);
+}
+
+.reporter .runnable.test.runnable-failed>.runnable-wrapper {
+  border-left: var(--failed-border)
+}
+
+.reporter .runnable.suite.runnable-failed>div>.runnable-wrapper {
+  border-left: var(--failed-border);
+}
+
