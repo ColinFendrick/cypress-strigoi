@@ -287,3 +287,7 @@
   border-left: var(--failed-border);
 }
 
+.reporter .command-wrapper .command-alias-route {
+  background-color: var(--state-failed-color);
+}
+
